@@ -191,6 +191,10 @@ const Wrapper = ({ Component }) => {
       menu.push({ title: 'Entrée', href: '/admin/scan' });
     }
 
+    if (permissions.includes('admin')) {
+      menu.push({ title: 'Stocks', href: '/admin/stocks' });
+    }
+
     menu.push({ title: 'Mon compte', href: '/admin/account' });
 
     return menu;
