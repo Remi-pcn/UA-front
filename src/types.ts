@@ -231,6 +231,15 @@ export interface AdminTournament extends Tournament {
   displayCashprize: boolean;
 }
 
+export interface Log {
+  id: string;
+  userId: string;
+  method: string;
+  path: string;
+  body: string;
+  createdAt: Date;
+}
+
 export enum UserType {
   player = 'player',
   coach = 'coach',

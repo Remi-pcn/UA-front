@@ -1,0 +1,12 @@
+.log {
+  display: flex;
+  justify-content: space-around;
+
+  .bodyWrapper {
+    .body {
+      position: sticky;
+      top: 90px;
+    }
+
+  }
+}

@@ -80,6 +80,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       menu.push({ title: 'Boutique', href: '/admin/shop' });
       menu.push({ title: 'Partenaires', href: '/admin/partners' });
       menu.push({ title: 'Paramètres', href: '/admin/settings' });
+      menu.push({ title: 'Logs', href: '/admin/logs' });
     }
 
     menu.push({ title: 'Compte', href: '/admin/account' });
