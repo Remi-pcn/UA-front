@@ -15,6 +15,7 @@ const stringifyObject = (object: unknown, depth: number = 0): JSX.Element => {
   const tabulation = <>&nbsp;&nbsp;</>;
   const lineStart = Array.from(Array(depth).keys()).map(() => tabulation);
   if (object instanceof Array) {
+    if (object.length === 0) return <>[]</>;
     let result: JSX.Element = <>[</>;
     for (const value of object) {
       result = (
@@ -36,7 +37,9 @@ const stringifyObject = (object: unknown, depth: number = 0): JSX.Element => {
     );
     return result;
   }
+  if (object === null) return <>null</>;
   if (typeof object === 'object') {
+    if (Object.keys(object as object).length === 0) return <>{'{}'}</>;
     let result: JSX.Element = <>{'{'}</>;
     for (const key in object) {
       result = (
