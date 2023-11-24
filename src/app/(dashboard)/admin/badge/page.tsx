@@ -139,7 +139,7 @@ export default function BadgePage() {
             <h3 style={{ textAlign: 'center' }}>Preview sur le trombi</h3>
             {user!.orga!.roles.length > 0 ? (
               <TeamMember
-                color={user!.orga!.roles[roleToPreview].commissionRole}
+                commission={user!.orga!.roles[roleToPreview].commission}
                 member={user!}
                 role={user!.orga!.roles[roleToPreview].commissionRole}
                 image={canvasRef.current?.toDataURL() ?? ''}

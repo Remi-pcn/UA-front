@@ -356,8 +356,8 @@ const UserModal = ({
                   />
                   <Select
                     options={[
-                      { value: 'member', label: 'Membre' },
-                      { value: 'respo', label: 'Responsable' },
+                      { value: 'member', label: role.commission === 'coord' ? 'Coordinateur' : 'Membre' },
+                      { value: 'respo', label: role.commission === 'coord' ? 'Présidente' : 'Responsable' },
                     ]}
                     value={role.commissionRole}
                     onChange={(v) => {

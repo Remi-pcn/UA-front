@@ -259,7 +259,7 @@ export interface Commission {
   id: string;
   name: string;
   color: string;
-  masterCommission: string;
+  masterCommission?: string;
 }
 
 export type CommissionRole = 'respo' | 'member';
