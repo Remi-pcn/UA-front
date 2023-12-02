@@ -45,7 +45,7 @@ export const registerCashPayment = () => async (dispatch: Dispatch, getState: ()
 };
 
 export const searchUser = (userIdentifiable: string) => async (dispatch: Dispatch) => {
-  const { data: list } = await API.get(`admin/users?search=${userIdentifiable}`);
+  const list = await API.get(`admin/users?search=${userIdentifiable}`);
   if (list?.users?.length !== 1) toast.error("L'utilisateur n'existe pas");
   else dispatch(setSearchUser(list.users[0]));
 };
